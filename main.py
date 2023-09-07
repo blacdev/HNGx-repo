@@ -2,14 +2,14 @@ from fastapi import FastAPI, Request, status, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from fastapi.responses import JSONResponse
-import time
-
+from datetime import datetime
 
 
 
 #  get current time in utc and day of the week
 def get_current_time_and_day():
-  return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), time.strftime("%A", time.gmtime())
+  return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), datetime.utcnow().strftime("%A")
+
 
 app = FastAPI()
 

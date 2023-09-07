@@ -45,7 +45,7 @@ async def stage_one_task(slack_name="null", track="null"):
       "track": track,
       "github_file_url": "https://github.com/blacdev/repo/blob/main/staging/main.py",
       "github_repo_url": "https://github.com/blacdev/HNGx-repo",
-      '“status_code”': 200
+      "status_code": 200
   })
      
   except Exception as e:

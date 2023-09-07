@@ -38,6 +38,15 @@ async def stage_one_task(slack_name="null", track="null"):
       })
     
     Time, day = get_current_time_and_day() 
+    print({
+      "slack_name": slack_name,
+      "current_day": day,
+      "utc_time": Time,
+      "track": track,
+      "github_file_url": "https://github.com/blacdev/repo/blob/main/staging/main.py",
+      "github_repo_url": "https://github.com/blacdev/HNGx-repo",
+      "status_code": 200
+  })
     return JSONResponse(status_code=status.HTTP_200_OK, content={
       "slack_name": slack_name,
       "current_day": day,

@@ -22,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-@app.get("/")
+@app.get("/api")
 async def stage_one_task(slack_name="null", track="null"):
 
   try:
